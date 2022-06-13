@@ -1,1 +1,1 @@
-web: gunicorn sleepapp-backend.wsgi
+web: gunicorn sleepapp.wsgi
