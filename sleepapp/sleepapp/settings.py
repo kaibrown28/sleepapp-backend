@@ -31,7 +31,7 @@ DEBUG = True
 
 ALLOWED_HOSTS = [
     'localhost',
-    'damp-ocean-33580.herokuapp.com/'
+    'damp-ocean-33580.herokuapp.com'
 ]
 
 
