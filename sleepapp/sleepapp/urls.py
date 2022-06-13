@@ -18,6 +18,6 @@ from django.urls import path
 from django.conf.urls import include # add this
 
 urlpatterns = [
-    path('', include('sleepData_api.urls')), # add this
+    path('', include('user_data_api.urls')), # add this
     path('admin/', admin.site.urls),
 ]
