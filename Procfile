@@ -1,1 +1,1 @@
-web: gunicorn sleep_app_api.wsgi
+web: gunicorn sleepapp.wsgi
