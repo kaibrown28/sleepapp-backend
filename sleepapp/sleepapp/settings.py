@@ -38,6 +38,8 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'bcrypt',
+    'auth_api',
     'corsheaders',
     'rest_framework',
     'user_data_api',
@@ -93,6 +95,13 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sleep_app_api',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost'
+    },
+    'user_auth': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'auth_api',
         'USER': '',
         'PASSWORD': '',
         'HOST': 'localhost'
