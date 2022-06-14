@@ -19,5 +19,6 @@ from django.conf.urls import include # add this
 
 urlpatterns = [
     path('', include('user_data_api.urls')), # add this
+    path('', include('auth_api.urls')), # add this
     path('admin/', admin.site.urls),
 ]
