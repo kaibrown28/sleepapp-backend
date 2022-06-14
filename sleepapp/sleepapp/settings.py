@@ -38,6 +38,8 @@ ALLOWED_HOSTS = [
 # Application definition
 
 INSTALLED_APPS = [
+    'bcrypt',
+    'auth_api',
     'corsheaders',
     'rest_framework',
     'user_data_api',
@@ -96,11 +98,32 @@ DATABASES = {
         'USER': '',
         'PASSWORD': '',
         'HOST': 'localhost'
+    },
+    'user_auth': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'auth_api',
+        'USER': '',
+        'PASSWORD': '',
+        'HOST': 'localhost'
     }
 }
 
 db_from_env = dj_database_url.config(conn_max_age=600)
 DATABASES['default'].update(db_from_env)
+DATABASES['user_auth'].update(db_from_env)
+
+############
+# Bcrypt password Hashers
+############
+PASSWORD_HASHERS = [
+    'django.contrib.auth.hashers.BCryptSHA256PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2PasswordHasher',
+    'django.contrib.auth.hashers.PBKDF2SHA1PasswordHasher',
+    'django.contrib.auth.hashers.Argon2PasswordHasher',
+]
+
+
+
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators
 
