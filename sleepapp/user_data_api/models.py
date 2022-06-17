@@ -8,5 +8,5 @@ class sleepData(models.Model):
     hoursSlept= models.IntegerField()
     routine = models.CharField(max_length=100)
     sleepQuality = models.IntegerField()
-    username = models.CharField(max_length=20)
-    notes = models.CharField(max_length=500)
+    username = models.CharField(max_length=20, default='')
+    notes = models.CharField(max_length=500, default='')
